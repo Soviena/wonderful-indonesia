@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style/index.css">
+        <link rel="shortcut icon" type="image/x-icon" href="Assets/img/favicon.ico">
+        <title>Wonderful Kalsel</title>
+    </head>
+
+    <body> 
+		<header>
+            <span class="burger" onclick="openNav()">&#9776;</span>
+
+            <div id="mySidenav" class="sidenav">
+                <img class="sidenav-logo" src="Assets/img/logo.PNG">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a class="here">Home</a>
+                <a href="wisata.html">Wisata</a>
+                <a href="tarian.html">Tarian</a>
+                <a href="kuliner.html">Kuliner</a>
+                    <div class="about">
+                        <p>Contact Us</p>
+                        <img src="./Assets/img/sosmed/fb.png">
+                        <img src="./Assets/img/sosmed/wa.png">
+                        <img src="./Assets/img/sosmed/email.png">                        
+                        <img src="./Assets/img/sosmed/line.png">
+                    </div>
+            </div>
+        
+        </header>
+        
+        <main class="wrapper" id="page">
+
+        <div id="hero" class="section parallax bg1">
+            <div class="overlay">Wonderful Kalsel</div>
+            <a href="#content" class="arrow-link">
+                <i class="arrow-up"></i>
+                <i class="arrow-up-l"></i>
+            </a>
+        </div>
+
+        <section id="content" class="static">
+            <div class="textbox">
+                <h1>Wonderful Kalsel</h1>
+                <p1>Telusuri Keanekaragaman Keindahan Wisata, Tarian, dan Kuliner yang Dimiliki Kalimantan Selatan</p1>
+            </div>
+            <div id="wisata" class="isi">
+                <a href="wisata.html">
+                    <div class="photo-right">
+                        <img src="./Assets/img/wisata/menara-pandang.jpg" class="bg-kanan"></img>
+                        <div class="photo-text r">
+                            <p class="photo-p">Menara Pandang</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="text-bg-l">
+                    <h2 class="kiri">Wisata</h2>
+                    <p>Kalimantan Selatan dipenuhi dengan kekayaan wisata alam yang cantik dan indah.
+                        Telusuri tempat wisata tersebut <a class="p" href="wisata.html">disini.</a>
+                    </p>
+                </div>
+            </div>
+            <div id="tarian" class="isi">
+                <a href="tarian.html">
+                    <div class="photo-left">
+                        <img src="./Assets/img/tarian/tari-kanjar.jpg" class="bg-kiri"></img>
+                            <div class="photo-text l">
+                                <p class="photo-p">Tari Kanjar</p>
+                            </div>
+                    </div>
+                </a>
+                <div class="text-bg-r">
+                    <h2 class="kanan">Tarian</h2>
+                    <p class="kanan">Kalimantan Selatan dipenuhi dengan banyak jenis tari yang indah lagi menawan.
+                        Telusuri jenis tari tersebut <a class="p" href="tarian.html">disini.</a>
+                    </p>
+                </div>
+            </div>
+            <div id="kuliner" class="isi">
+                <a href="kuliner.html">
+                    <div class="photo-right">
+                        <img src="./Assets/img/kuliner/amparan-tatak.jpg" class="bg-kanan"></img>
+                        <div class="photo-text r">
+                                <p class="photo-p">Amparan Tatak</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="text-bg-l">
+                    <h2 class="kiri">Kuliner</h2>
+                    <p>Kalimantan Selatan dipenuhi dengan berbagai macam kuliner yang enak dan menggugah selera.
+                        Telusuri berbagai macam kuliner tersebut <a class="p" href="kuliner.html">disini.</a>
+                    </p>                
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <img src="Assets/img/logo.PNG">
+            </br>
+            <pf>&copy;Some Right Reserved</br>By Rovino</pf>
+        </footer>
+        </main>
+        <script>
+            function openNav() {
+            document.getElementById("mySidenav").style.width = "400px";
+            document.getElementById("page").style.marginLeft = "300px";
+            }
+                
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("page").style.marginLeft= "0";
+            }
+        </script>
+    </body>
+</html>
