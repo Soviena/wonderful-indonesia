@@ -1,0 +1,307 @@
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*------Header-----*/
+header {
+  z-index: 2;
+  position: fixed;
+  margin-left: -5px;
+  margin-top: 20px;
+}
+
+span {
+  font-size: 60px;
+  cursor: pointer;
+  color: #f4dcb2;
+  /* text-shadow: 0px 0px 12px #000000; */
+  transition: all 0.8s;
+  border-style: solid;
+  padding-left: 30px;
+  background: #00000094;
+}
+
+span::after {
+  content: "MENU";
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-left: -80px;
+  font-size: 30px;
+  top: -9px;
+  margin-right: 25px;
+}
+
+span:hover::after {
+  opacity: 1;
+  margin-left: 20px;
+}
+
+span:hover {
+  color: #d49c31;
+}
+
+/* SideNav */
+.sidenav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #402123;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: 0px 0px 20px 0px black;
+  overflow-y: hidden;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 50px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f5deb3;
+  font-size: 35px;
+  background: #1f101199;
+}
+
+a.here {
+  color: wheat;
+  opacity: 0.5;
+  background: black;
+  pointer-events: none;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+#page {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+      padding-top: 15px;
+  }
+
+  .sidenav a {
+      font-size: 18px;
+  }
+}
+
+.sidenav-logo {
+  width: 300px;
+  height: auto;
+  margin-left: 32px;
+}
+
+.about {
+  justify-content: center;
+  padding-top: 90px;
+  padding-bottom: 100vh;
+  box-shadow: 0px 0px 20px 2px #000000ab;
+  background: #361c1d;
+  margin-top: 40vh;
+}
+
+.about img {
+  height: auto;
+  width: 13%;
+  filter: invert(0.7);
+  margin-left: 34px;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.about img:hover {
+  transform: scale(1.2);
+  filter: invert(1)
+}
+
+.about p {
+  font-family: sans-serif;
+  color: white;
+  font-variant: small-caps;
+  position: relative;
+  font-size: 25px;
+  margin-left: 31%;
+  margin-bottom: 30px;
+  margin-top: -60px;
+}
+
+/*--Main Content--*/
+body {
+  transition: background-color .5s;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  /* text formatting. */
+  position: relative;
+  height: 50vh;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 60px;
+  font-variant: small-caps;
+}
+
+/* Wonderful Kalsel Text */
+.overlay {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2);
+  background-size: 100%;
+  z-index: -2;
+}
+
+.bg1::after {
+  background-image: url(../Assets/img/wisata/pantai-teluk-tamiang.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.8);
+  top: -80%;
+}
+
+.bg2::after {
+  background-image: url(../Assets/img/tarian/baksa-kambang.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.6);
+  top: -60%;
+}
+
+.bg3::after {
+  background-image: url(../Assets/img/kuliner/kelelepon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.6);
+  top: -80%;
+}
+
+/*content*/
+#content {
+  width: auto;
+  height: fit-content;
+  background: linear-gradient(to bottom, #f5deb300 0%,#ffffff00 5%, #801e19 5%);
+  z-index: -2;
+  padding-bottom: 1%;
+}
+
+.txt-bg {
+  position: relative;
+  height: 50vh;
+  width: 80vw;
+  justify-content: center;
+  background: #a66a3f;
+  box-shadow: -5px 7px 20px 0px #00000057;
+  align-items: center;
+  z-index: 0;
+  margin-left: 20%;
+  margin-bottom: 10vh;
+}
+
+.photo-box {
+  height: fit-content;
+  width: 33%;
+  background: #815331;
+  margin-left: 5%;
+  position: absolute;
+  top: 60px;
+  overflow: hidden;
+  border-style: solid;
+  border-color: #815331;
+}
+
+.photo-box img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  width : 50vw;
+}
+
+/*--Footer--*/
+footer {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #ab2822;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: inset 0px 10px 20px 0px #0000005e;
+}
+
+/* ScrollBar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #293752;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #69566c;
+  transition-duration: 0.8s;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #967a3a;
+}
